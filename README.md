@@ -3,7 +3,7 @@
 FULL: https://github.com/klofberg/Xamarin.Forms.Xaml.LiveReload
 
 
-SHORT
+SHORT:
 Program.cs -> Console APP
 LiveReload.cs -> Add to PCL and use
 
