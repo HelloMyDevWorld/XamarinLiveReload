@@ -2,8 +2,11 @@
 
 FULL: https://github.com/klofberg/Xamarin.Forms.Xaml.LiveReload
 
-Program -> Console APP
-LiveReload -> Add to PCL and use
+
+//SHORT
+Program : Console APP
+LiveReload : Add to PCL and use
+
 
                   public App()
                        {
