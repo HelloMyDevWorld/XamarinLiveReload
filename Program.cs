@@ -10,14 +10,9 @@ using System.Threading.Tasks;
 
 namespace Xamarin.Forms.Xaml.LiveReload.Server
 {
-    public enum MessageType
-    {
-        XamlUpdated
-    }
 
     public class Message
     {
-        public MessageType MessageType { get; set; }
         public byte[] Payload { get; set; }
     }
     
@@ -26,10 +21,10 @@ namespace Xamarin.Forms.Xaml.LiveReload.Server
         public static void SendMessage(this IEnumerable<TcpClient> clients, Message message)
         {
             var payload = message.Payload ?? new byte[0];
-            var messageTypeBytes = BitConverter.GetBytes((int)message.MessageType);
+     
             var payloadSizeBytes = BitConverter.GetBytes(payload.Length);
             var data = new List<byte>();
-            data.AddRange(messageTypeBytes);
+       
             data.AddRange(payloadSizeBytes);
             data.AddRange(payload);
             foreach (var socket in clients)
@@ -47,11 +42,10 @@ namespace Xamarin.Forms.Xaml.LiveReload.Server
         }
     }
 
-    class Program
+    public class Program
     {
 
-
-        static void Main(string[] args)
+        static void Main()
         {
             
             Console.WriteLine("Insert URL");
@@ -81,7 +75,6 @@ namespace Xamarin.Forms.Xaml.LiveReload.Server
             };
             fw.Changed += (sender, eventArgs) =>
             {
-
                 var xaml = "";
                 using (var fileStream = new FileStream(url, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 using (var textReader = new StreamReader(fileStream, Encoding.Default)) {
@@ -90,15 +83,13 @@ namespace Xamarin.Forms.Xaml.LiveReload.Server
                 clients.RemoveAll(x => !x.Connected);
                 clients.SendMessage(new Message
                 {
-                    MessageType = MessageType.XamlUpdated,
                     Payload = Encoding.UTF8.GetBytes(xaml)
                 });
                 Console.WriteLine($"Updated");
             };
 
-
-            
             Console.ReadLine();
         }
+
     }
 }
