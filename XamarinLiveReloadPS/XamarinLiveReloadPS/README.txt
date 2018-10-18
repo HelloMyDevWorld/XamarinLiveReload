@@ -2,7 +2,7 @@
 
       public App()
         {
-            Xamarin.Forms.Xaml.LiveReload.LiveReload.Enable(this, exception =>
+            LiveReload.Enable(this, exception =>
             {
                 System.Diagnostics.Debug.WriteLine(exception);
             });

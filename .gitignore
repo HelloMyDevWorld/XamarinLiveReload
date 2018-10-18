@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/XamarinLiveReloadPS/XamarinLiveReloadPS/bin/Debug
+/XamarinLiveReloadPS/.vs/XamarinLiveReloadPS/v15
+/XamarinLiveReloadPS/XamarinLiveReloadPS/obj/Debug

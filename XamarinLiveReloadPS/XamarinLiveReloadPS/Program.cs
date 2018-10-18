@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace XamarinLiveReloadPS
@@ -146,6 +147,11 @@ namespace XamarinLiveReloadPS
                     {
                         xaml = textReader.ReadToEnd();
                     }
+
+                    xaml=Regex.Replace(xaml,@"(xmlns:d="")(.*)("")","");
+                    xaml=Regex.Replace(xaml,@"(xmlns:mc="")(.*)("")","");
+                    xaml=Regex.Replace(xaml,@"(mc:Ignorable="")(.*)("")","");
+                    xaml=Regex.Replace(xaml,@"(d:DataContext="")(.*)("")","");
 
                     clients.RemoveAll(x => !x.Connected);
                     clients.SendMessage(new Message
