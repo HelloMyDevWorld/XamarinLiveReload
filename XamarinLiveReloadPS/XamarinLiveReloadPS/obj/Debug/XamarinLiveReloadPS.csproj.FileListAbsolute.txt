@@ -1,0 +1,7 @@
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\bin\Debug\XamarinLiveReloadPS.exe.config
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\bin\Debug\XamarinLiveReloadPS.exe
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\bin\Debug\XamarinLiveReloadPS.pdb
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\obj\Debug\XamarinLiveReloadPS.csprojAssemblyReference.cache
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\obj\Debug\XamarinLiveReloadPS.csproj.CoreCompileInputs.cache
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\obj\Debug\XamarinLiveReloadPS.exe
+C:\Users\pasa\source\repos\XamarinLiveReloadPS\XamarinLiveReloadPS\obj\Debug\XamarinLiveReloadPS.pdb
