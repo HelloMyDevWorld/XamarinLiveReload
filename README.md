@@ -1,13 +1,6 @@
 # XamarinLiveReload
 
-FULL: https://github.com/klofberg/Xamarin.Forms.Xaml.LiveReload
-
-
-SHORT:
-Program.cs -> Console APP
-LiveReload.cs -> Add to PCL and use
-
-
+# Usage
                   public App()
                        {
                            Xamarin.Forms.Xaml.LiveReload.LiveReload.Enable(this, exception =>
@@ -17,3 +10,5 @@ LiveReload.cs -> Add to PCL and use
 
                            SetInitialPage();
                        }
+
+Author of idea: https://github.com/klofberg/Xamarin.Forms.Xaml.LiveReload
